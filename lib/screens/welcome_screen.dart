@@ -1,3 +1,4 @@
+import 'package:firebase_app_flutter/widgets/customized_button.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -12,30 +13,15 @@ class WelcomeScreen extends StatelessWidget {
       decoration: const BoxDecoration(color: Color(0xFF093631)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          const SizedBox(
+        children: const [
+          SizedBox(
               height: 130,
               width: 220,
               child: Image(
                 image: AssetImage("assets/logo.png"),
                 fit: BoxFit.cover,
               )),
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Container(
-              height: 80,
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                  color: Colors.black,
-                  border: Border.all(width: 1, color: Colors.white),
-                  borderRadius: BorderRadius.circular(10)),
-              child: Center(
-                  child: Text(
-                "LogIn",
-                style: TextStyle(color: Colors.white, fontSize: 20),
-              )),
-            ),
-          )
+          customizedButton()
         ],
       ),
     ));
