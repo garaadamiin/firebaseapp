@@ -1,4 +1,4 @@
-import 'package:firebase_app_flutter/sreens/welcome_screen.dart';
+import 'package:firebase_app_flutter/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
