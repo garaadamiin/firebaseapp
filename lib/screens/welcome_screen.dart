@@ -13,15 +13,20 @@ class WelcomeScreen extends StatelessWidget {
       decoration: const BoxDecoration(color: Color(0xFF093631)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
-        children: const [
-          SizedBox(
+        children: [
+          const SizedBox(
               height: 130,
               width: 220,
               child: Image(
                 image: AssetImage("assets/logo.png"),
                 fit: BoxFit.cover,
               )),
-          customizedButton()
+          customizedButton(
+            buttonText: "Login",
+            buttonColor: Colors.black,
+            textColor: Colors.white,
+            onPressed: () {},
+          )
         ],
       ),
     ));
