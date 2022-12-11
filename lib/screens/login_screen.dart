@@ -10,10 +10,10 @@ class LoginScreen extends StatelessWidget {
         body: Container(
           height: MediaQuery.of(context).size.height,
           width: double.infinity,
-          child: Column(children: [
-            Align(
-              alignment: Alignment.centerLeft,
-              child: Padding(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Container(
                   height: 50,
@@ -29,8 +29,17 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
               ),
-            )
-          ]),
+              const Padding(
+                padding: EdgeInsets.all(10.0),
+                child: Text("Welcome Back! Glad \nto see you again",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                    )),
+              )
+            ],
+          ),
         ),
       ),
     );
