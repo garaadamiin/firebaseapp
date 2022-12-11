@@ -1,3 +1,4 @@
+import 'package:firebase_app_flutter/screens/login_screen.dart';
 import 'package:firebase_app_flutter/widgets/customized_button.dart';
 import 'package:flutter/material.dart';
 
@@ -26,7 +27,10 @@ class WelcomeScreen extends StatelessWidget {
             buttonText: "Login",
             buttonColor: Colors.black,
             textColor: Colors.white,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (_) => const LoginScreen()));
+            },
           ),
           customizedButton(
             buttonText: "Register",
