@@ -21,6 +21,7 @@ class WelcomeScreen extends StatelessWidget {
                 image: AssetImage("assets/logo.png"),
                 fit: BoxFit.cover,
               )),
+          const SizedBox(height: 40),
           customizedButton(
             buttonText: "Login",
             buttonColor: Colors.black,
@@ -33,9 +34,13 @@ class WelcomeScreen extends StatelessWidget {
             textColor: Colors.black,
             onPressed: () {},
           ),
-          Text(
-            "Continue as a Guest",
-            style: TextStyle(color: Colors.white),
+          const SizedBox(height: 20),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Text(
+              "Continue as a Guest",
+              style: TextStyle(color: Colors.white, fontSize: 25),
+            ),
           )
         ],
       ),
