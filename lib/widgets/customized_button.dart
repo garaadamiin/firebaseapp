@@ -19,11 +19,11 @@ class customizedButton extends StatelessWidget {
       child: InkWell(
         onTap: onPressed,
         child: Container(
-          height: 80,
+          height: 70,
           width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
               color: buttonColor,
-              border: Border.all(width: 1, color: Colors.white),
+              border: Border.all(width: 1, color: Colors.black),
               borderRadius: BorderRadius.circular(10)),
           child: Center(
               child: Text(
