@@ -26,6 +26,12 @@ class WelcomeScreen extends StatelessWidget {
             buttonColor: Colors.black,
             textColor: Colors.white,
             onPressed: () {},
+          ),
+          customizedButton(
+            buttonText: "Register",
+            buttonColor: Colors.white,
+            textColor: Colors.black,
+            onPressed: () {},
           )
         ],
       ),
