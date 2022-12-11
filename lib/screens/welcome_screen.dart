@@ -32,6 +32,10 @@ class WelcomeScreen extends StatelessWidget {
             buttonColor: Colors.white,
             textColor: Colors.black,
             onPressed: () {},
+          ),
+          Text(
+            "Continue as a Guest",
+            style: TextStyle(color: Colors.white),
           )
         ],
       ),
