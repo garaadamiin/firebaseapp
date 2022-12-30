@@ -110,13 +110,12 @@ class _LoginScreenState extends State<LoginScreen> {
                         border: Border.all(color: Colors.black, width: 1),
                         borderRadius: BorderRadius.circular(10),
                       ),
-                    ),
-                    Container(
-                      height: 50,
-                      width: 100,
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.black, width: 1),
-                        borderRadius: BorderRadius.circular(10),
+                      child: IconButton(
+                        icon: Icon(
+                          Icons.facebook,
+                          color: Colors.blue,
+                        ),
+                        onPressed: () {},
                       ),
                     ),
                     Container(
@@ -125,6 +124,28 @@ class _LoginScreenState extends State<LoginScreen> {
                       decoration: BoxDecoration(
                         border: Border.all(color: Colors.black, width: 1),
                         borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: IconButton(
+                        icon: Icon(
+                          Icons.facebook,
+                          color: Colors.blue,
+                        ),
+                        onPressed: () {},
+                      ),
+                    ),
+                    Container(
+                      height: 50,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.black, width: 1),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: IconButton(
+                        icon: Icon(
+                          Icons.facebook,
+                          color: Colors.blue,
+                        ),
+                        onPressed: () {},
                       ),
                     )
                   ],
