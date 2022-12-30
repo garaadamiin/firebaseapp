@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/customized_button.dart';
 import '../widgets/customized_textfield.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -68,6 +69,65 @@ class _LoginScreenState extends State<LoginScreen> {
                       fontSize: 15,
                     ),
                   ),
+                ),
+              ),
+              customizedButton(
+                buttonText: "Login",
+                buttonColor: Colors.black,
+                textColor: Colors.white,
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => const LoginScreen()));
+                },
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Row(
+                  children: [
+                    Container(
+                      height: 1,
+                      width: MediaQuery.of(context).size.height * 0.32,
+                      color: Colors.grey,
+                    ),
+                    const Text(" Or Login with "),
+                    Container(
+                      height: 1,
+                      width: MediaQuery.of(context).size.height * 0.33,
+                      color: Colors.grey,
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Container(
+                      height: 50,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.black, width: 1),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                    Container(
+                      height: 50,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.black, width: 1),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                    Container(
+                      height: 50,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.black, width: 1),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    )
+                  ],
                 ),
               )
             ],
