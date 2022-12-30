@@ -51,6 +51,11 @@ class _LoginScreenState extends State<LoginScreen> {
                 myController: _emailController,
                 hintText: "Enter your Email",
                 isPassword: false,
+              ),
+              CustomizedTextfield(
+                myController: _passwordController,
+                hintText: "Enter your Password",
+                isPassword: true,
               )
             ],
           ),
