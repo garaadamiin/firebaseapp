@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/customized_textfield.dart';
+
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -45,17 +47,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       fontWeight: FontWeight.bold,
                     )),
               ),
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: TextField(
-                  controller: _emailController,
-                  decoration: InputDecoration(
-                    hintText: "Enter your Email",
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10)),
-                  ),
-                ),
-              ),
+              CustomizedTextfield(
+                myController: _emailController,
+                hintText: "Enter your Email",
+                isPassword: false,
+              )
             ],
           ),
         ),
