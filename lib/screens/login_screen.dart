@@ -56,6 +56,19 @@ class _LoginScreenState extends State<LoginScreen> {
                 myController: _passwordController,
                 hintText: "Enter your Password",
                 isPassword: true,
+              ),
+              const Align(
+                alignment: Alignment.centerRight,
+                child: Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: Text(
+                    "Forgot Password?",
+                    style: TextStyle(
+                      color: Color(0xff6A707C),
+                      fontSize: 15,
+                    ),
+                  ),
+                ),
               )
             ],
           ),
