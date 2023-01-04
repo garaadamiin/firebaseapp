@@ -11,6 +11,7 @@ class SigUpScreen extends StatefulWidget {
 
 class _SigUpScreenState extends State<SigUpScreen> {
   TextEditingController _usernamelController = TextEditingController();
+  TextEditingController _emailController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -50,6 +51,11 @@ class _SigUpScreenState extends State<SigUpScreen> {
               CustomizedTextfield(
                 myController: _usernamelController,
                 hintText: "Username",
+                isPassword: false,
+              ),
+              CustomizedTextfield(
+                myController: _emailController,
+                hintText: "Email",
                 isPassword: false,
               ),
             ],
