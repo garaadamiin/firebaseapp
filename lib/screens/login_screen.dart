@@ -1,3 +1,4 @@
+import 'package:firebase_app_flutter/screens/forgotPassword_screen.dart';
 import 'package:firebase_app_flutter/screens/signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -60,15 +61,23 @@ class _LoginScreenState extends State<LoginScreen> {
                 hintText: "Enter your Password",
                 isPassword: true,
               ),
-              const Align(
+              Align(
                 alignment: Alignment.centerRight,
                 child: Padding(
                   padding: EdgeInsets.all(10.0),
-                  child: Text(
-                    "Forgot Password?",
-                    style: TextStyle(
-                      color: Color(0xff6A707C),
-                      fontSize: 15,
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (_) => const ForgotPasswordScreen()));
+                    },
+                    child: const Text(
+                      "Forgot Password?",
+                      style: TextStyle(
+                        color: Color(0xff6A707C),
+                        fontSize: 15,
+                      ),
                     ),
                   ),
                 ),
