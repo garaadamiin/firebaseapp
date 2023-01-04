@@ -12,6 +12,8 @@ class SigUpScreen extends StatefulWidget {
 class _SigUpScreenState extends State<SigUpScreen> {
   TextEditingController _usernamelController = TextEditingController();
   TextEditingController _emailController = TextEditingController();
+  TextEditingController _passwordController = TextEditingController();
+  TextEditingController _confirmPasswordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -57,6 +59,16 @@ class _SigUpScreenState extends State<SigUpScreen> {
                 myController: _emailController,
                 hintText: "Email",
                 isPassword: false,
+              ),
+              CustomizedTextfield(
+                myController: _passwordController,
+                hintText: "Password",
+                isPassword: true,
+              ),
+              CustomizedTextfield(
+                myController: _passwordController,
+                hintText: "Confrim Password",
+                isPassword: true,
               ),
             ],
           ),
