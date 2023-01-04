@@ -1,4 +1,5 @@
 import 'package:firebase_app_flutter/screens/login_screen.dart';
+import 'package:firebase_app_flutter/screens/signup_screen.dart';
 import 'package:firebase_app_flutter/widgets/customized_button.dart';
 import 'package:flutter/material.dart';
 
@@ -36,7 +37,10 @@ class WelcomeScreen extends StatelessWidget {
             buttonText: "Register",
             buttonColor: Colors.white,
             textColor: Colors.black,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (_) => const SigUpScreen()));
+            },
           ),
           const SizedBox(height: 20),
           Padding(
