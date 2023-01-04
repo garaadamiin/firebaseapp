@@ -1,3 +1,4 @@
+import 'package:firebase_app_flutter/screens/signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -81,23 +82,21 @@ class _LoginScreenState extends State<LoginScreen> {
                       MaterialPageRoute(builder: (_) => const LoginScreen()));
                 },
               ),
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Row(
-                  children: [
-                    Container(
-                      height: 1,
-                      width: MediaQuery.of(context).size.height * 0.32,
-                      color: Colors.grey,
-                    ),
-                    const Text(" Or Login with "),
-                    Container(
-                      height: 1,
-                      width: MediaQuery.of(context).size.height * 0.33,
-                      color: Colors.grey,
-                    ),
-                  ],
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    height: 1,
+                    width: MediaQuery.of(context).size.height * 0.1,
+                    color: Colors.grey,
+                  ),
+                  const Text(" Or Login with "),
+                  Container(
+                    height: 1,
+                    width: MediaQuery.of(context).size.height * 0.1,
+                    color: Colors.grey,
+                  ),
+                ],
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -157,14 +156,22 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Text(
+                children: [
+                  const Text(
                     "Don't have an account?",
                     style: TextStyle(color: Color(0xff1E232C), fontSize: 15),
                   ),
-                  Text(
-                    " Register Now",
-                    style: TextStyle(color: Color(0xff35C2C1), fontSize: 15),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (_) => const SigUpScreen()));
+                    },
+                    child: const Text(
+                      " Register Now",
+                      style: TextStyle(color: Color(0xff35C2C1), fontSize: 15),
+                    ),
                   )
                 ],
               )

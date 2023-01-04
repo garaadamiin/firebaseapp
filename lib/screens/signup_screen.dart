@@ -1,4 +1,6 @@
+import 'package:firebase_app_flutter/screens/login_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../widgets/customized_button.dart';
 import '../widgets/customized_textfield.dart';
@@ -80,6 +82,99 @@ class _SigUpScreenState extends State<SigUpScreen> {
                       MaterialPageRoute(builder: (_) => const SigUpScreen()));
                 },
               ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    height: 1,
+                    width: MediaQuery.of(context).size.height * 0.1,
+                    color: Colors.grey,
+                  ),
+                  const Text(" Or Register with "),
+                  Container(
+                    height: 1,
+                    width: MediaQuery.of(context).size.height * 0.1,
+                    color: Colors.grey,
+                  ),
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Container(
+                      height: 50,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.black, width: 1),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: IconButton(
+                        icon: const Icon(
+                          FontAwesomeIcons.facebookF,
+                          color: Colors.blue,
+                        ),
+                        onPressed: () {},
+                      ),
+                    ),
+                    Container(
+                      height: 50,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.black, width: 1),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: IconButton(
+                        icon: const Icon(
+                          FontAwesomeIcons.google,
+                          color: Colors.blue,
+                        ),
+                        onPressed: () {},
+                      ),
+                    ),
+                    Container(
+                      height: 50,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.black, width: 1),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: IconButton(
+                        icon: const Icon(
+                          FontAwesomeIcons.apple,
+                          color: Colors.blue,
+                        ),
+                        onPressed: () {},
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 40,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text(
+                    "Already have an account?",
+                    style: TextStyle(color: Color(0xff1E232C), fontSize: 15),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (_) => const LoginScreen()));
+                    },
+                    child: const Text(
+                      " LogIn Now",
+                      style: TextStyle(color: Color(0xff35C2C1), fontSize: 15),
+                    ),
+                  )
+                ],
+              )
             ],
           ),
         ),
