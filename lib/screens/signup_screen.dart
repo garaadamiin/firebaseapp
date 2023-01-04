@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/customized_button.dart';
 import '../widgets/customized_textfield.dart';
 
 class SigUpScreen extends StatefulWidget {
@@ -69,6 +70,15 @@ class _SigUpScreenState extends State<SigUpScreen> {
                 myController: _passwordController,
                 hintText: "Confrim Password",
                 isPassword: true,
+              ),
+              customizedButton(
+                buttonText: "Register",
+                buttonColor: Colors.black,
+                textColor: Colors.white,
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => const SigUpScreen()));
+                },
               ),
             ],
           ),
