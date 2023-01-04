@@ -2,6 +2,7 @@ import 'package:firebase_app_flutter/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../widgets/auth_button.dart';
 import '../widgets/customized_button.dart';
 import '../widgets/customized_textfield.dart';
 
@@ -98,59 +99,7 @@ class _SigUpScreenState extends State<SigUpScreen> {
                   ),
                 ],
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Container(
-                      height: 50,
-                      width: 100,
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.black, width: 1),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: IconButton(
-                        icon: const Icon(
-                          FontAwesomeIcons.facebookF,
-                          color: Colors.blue,
-                        ),
-                        onPressed: () {},
-                      ),
-                    ),
-                    Container(
-                      height: 50,
-                      width: 100,
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.black, width: 1),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: IconButton(
-                        icon: const Icon(
-                          FontAwesomeIcons.google,
-                          color: Colors.blue,
-                        ),
-                        onPressed: () {},
-                      ),
-                    ),
-                    Container(
-                      height: 50,
-                      width: 100,
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.black, width: 1),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: IconButton(
-                        icon: const Icon(
-                          FontAwesomeIcons.apple,
-                          color: Colors.blue,
-                        ),
-                        onPressed: () {},
-                      ),
-                    )
-                  ],
-                ),
-              ),
+              authButton(),
               const SizedBox(
                 height: 40,
               ),
