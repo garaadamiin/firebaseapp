@@ -75,7 +75,7 @@ class _SigUpScreenState extends State<SigUpScreen> {
               ),
               customizedButton(
                 buttonText: "Register",
-                buttonColor: Colors.black,
+                buttonColor: Color(0xFF093631),
                 textColor: Colors.white,
                 onPressed: () {
                   Navigator.push(context,
@@ -170,7 +170,7 @@ class _SigUpScreenState extends State<SigUpScreen> {
                     },
                     child: const Text(
                       " LogIn Now",
-                      style: TextStyle(color: Color(0xff35C2C1), fontSize: 15),
+                      style: TextStyle(color: Color(0xffffb000), fontSize: 15),
                     ),
                   )
                 ],

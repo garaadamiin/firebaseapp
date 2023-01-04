@@ -84,7 +84,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               customizedButton(
                 buttonText: "Login",
-                buttonColor: Colors.black,
+                buttonColor: Color(0xFF093631),
                 textColor: Colors.white,
                 onPressed: () {
                   Navigator.push(context,
@@ -122,7 +122,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: IconButton(
                         icon: const Icon(
                           FontAwesomeIcons.facebookF,
-                          color: Colors.blue,
+                          color: Color(0xFF093631),
                         ),
                         onPressed: () {},
                       ),
@@ -137,7 +137,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: IconButton(
                         icon: const Icon(
                           FontAwesomeIcons.google,
-                          color: Colors.blue,
+                          color: Color(0xFF093631),
                         ),
                         onPressed: () {},
                       ),
@@ -152,7 +152,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: IconButton(
                         icon: const Icon(
                           FontAwesomeIcons.apple,
-                          color: Colors.blue,
+                          color: Color(0xFF093631),
                         ),
                         onPressed: () {},
                       ),
@@ -168,7 +168,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 children: [
                   const Text(
                     "Don't have an account?",
-                    style: TextStyle(color: Color(0xff1E232C), fontSize: 15),
+                    style: TextStyle(color: Color(0xFF093631), fontSize: 15),
                   ),
                   InkWell(
                     onTap: () {
@@ -179,7 +179,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     },
                     child: const Text(
                       " Register Now",
-                      style: TextStyle(color: Color(0xff35C2C1), fontSize: 15),
+                      style: TextStyle(color: Color(0xffffb000), fontSize: 15),
                     ),
                   )
                 ],

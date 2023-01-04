@@ -1,3 +1,4 @@
+import 'package:firebase_app_flutter/screens/login_screen.dart';
 import 'package:firebase_app_flutter/screens/signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -42,11 +43,21 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
               ),
               const Padding(
                 padding: EdgeInsets.all(10.0),
-                child: Text("Welcome Back! Glad \nto see you again",
+                child: Text("Forgor Password?",
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
+                    )),
+              ),
+              const Padding(
+                padding: EdgeInsets.all(10.0),
+                child: Text(
+                    "Don't wory it accours Please enter the email address linked with your account",
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 18,
+                      fontWeight: FontWeight.normal,
                     )),
               ),
               CustomizedTextfield(
@@ -55,8 +66,8 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                 isPassword: false,
               ),
               customizedButton(
-                buttonText: "Send COde",
-                buttonColor: Colors.black,
+                buttonText: "Send Code",
+                buttonColor: Color(0xFF093631),
                 textColor: Colors.white,
                 onPressed: () {
                   Navigator.push(
@@ -65,6 +76,27 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                           builder: (_) => const ForgotPasswordScreen()));
                 },
               ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text(
+                    "Remember Password?",
+                    style: TextStyle(color: Color(0xff1E232C), fontSize: 15),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (_) => const LoginScreen()));
+                    },
+                    child: const Text(
+                      " LogIn",
+                      style: TextStyle(color: Color(0xffffb000), fontSize: 15),
+                    ),
+                  )
+                ],
+              )
             ],
           ),
         ),
