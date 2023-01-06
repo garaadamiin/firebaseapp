@@ -1,7 +1,7 @@
+import 'package:flutter/material.dart';
+
 import 'package:firebase_app_flutter/screens/forgotPassword_screen.dart';
 import 'package:firebase_app_flutter/screens/signup_screen.dart';
-import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../widgets/auth_button.dart';
 import '../widgets/customized_button.dart';
