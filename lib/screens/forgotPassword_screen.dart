@@ -1,7 +1,7 @@
-import 'package:firebase_app_flutter/screens/login_screen.dart';
-import 'package:firebase_app_flutter/screens/signup_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import 'package:firebase_app_flutter/screens/login_screen.dart';
+import 'package:firebase_app_flutter/screens/otp_screen.dart';
 
 import '../widgets/customized_button.dart';
 import '../widgets/customized_textfield.dart';
@@ -70,10 +70,8 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                 buttonColor: Color(0xFF093631),
                 textColor: Colors.white,
                 onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (_) => const ForgotPasswordScreen()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => const OtpScreen()));
                 },
               ),
               Row(
