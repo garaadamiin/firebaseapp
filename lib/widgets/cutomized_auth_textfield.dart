@@ -12,7 +12,7 @@ class CustomizedAuthTextfield extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(10.0),
-      child: Container(
+      child: SizedBox(
         height: 60,
         width: 60,
         child: TextField(
