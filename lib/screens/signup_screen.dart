@@ -14,16 +14,17 @@ class SigUpScreen extends StatefulWidget {
 }
 
 class _SigUpScreenState extends State<SigUpScreen> {
-  TextEditingController _usernamelController = TextEditingController();
-  TextEditingController _emailController = TextEditingController();
-  TextEditingController _passwordController = TextEditingController();
-  TextEditingController _confirmPasswordController = TextEditingController();
+  final TextEditingController _usernamelController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _confirmPasswordController =
+      TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Container(
+        body: SizedBox(
           height: MediaQuery.of(context).size.height,
           width: double.infinity,
           child: Column(
@@ -38,7 +39,7 @@ class _SigUpScreenState extends State<SigUpScreen> {
                       border: Border.all(color: Colors.black, width: 1),
                       borderRadius: BorderRadius.circular(10)),
                   child: IconButton(
-                    icon: Icon(Icons.arrow_back_ios_sharp),
+                    icon: const Icon(Icons.arrow_back_ios_sharp),
                     onPressed: () {
                       Navigator.pop(context);
                     },
@@ -70,13 +71,13 @@ class _SigUpScreenState extends State<SigUpScreen> {
                 isPassword: true,
               ),
               CustomizedTextfield(
-                myController: _passwordController,
+                myController: _confirmPasswordController,
                 hintText: "Confrim Password",
                 isPassword: true,
               ),
-              customizedButton(
+              CustomizedButton(
                 buttonText: "Register",
-                buttonColor: Color(0xFF093631),
+                buttonColor: const Color(0xFF093631),
                 textColor: Colors.white,
                 onPressed: () {
                   Navigator.push(context,
@@ -99,7 +100,7 @@ class _SigUpScreenState extends State<SigUpScreen> {
                   ),
                 ],
               ),
-              authButton(),
+              const AuthButton(),
               const SizedBox(
                 height: 40,
               ),
