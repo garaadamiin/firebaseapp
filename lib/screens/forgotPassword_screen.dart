@@ -14,12 +14,12 @@ class ForgotPasswordScreen extends StatefulWidget {
 }
 
 class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
-  TextEditingController _emailController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Container(
+        body: SizedBox(
           height: MediaQuery.of(context).size.height,
           width: double.infinity,
           child: Column(
@@ -34,7 +34,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                       border: Border.all(color: Colors.black, width: 1),
                       borderRadius: BorderRadius.circular(10)),
                   child: IconButton(
-                    icon: Icon(Icons.arrow_back_ios_sharp),
+                    icon: const Icon(Icons.arrow_back_ios_sharp),
                     onPressed: () {
                       Navigator.pop(context);
                     },
@@ -65,9 +65,9 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                 hintText: "Enter your Email",
                 isPassword: false,
               ),
-              customizedButton(
+              CustomizedButton(
                 buttonText: "Send Code",
-                buttonColor: Color(0xFF093631),
+                buttonColor: const Color(0xFF093631),
                 textColor: Colors.white,
                 onPressed: () {
                   Navigator.push(context,
