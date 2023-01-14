@@ -13,15 +13,15 @@ class OtpScreen extends StatefulWidget {
 }
 
 class _OtpScreenScreenState extends State<OtpScreen> {
-  TextEditingController _otpNumberController1 = TextEditingController();
-  TextEditingController _otpNumberController2 = TextEditingController();
-  TextEditingController _otpNumberController3 = TextEditingController();
-  TextEditingController _otpNumberController4 = TextEditingController();
+  final TextEditingController _otpNumberController1 = TextEditingController();
+  final TextEditingController _otpNumberController2 = TextEditingController();
+  final TextEditingController _otpNumberController3 = TextEditingController();
+  final TextEditingController _otpNumberController4 = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Container(
+        body: SizedBox(
           height: MediaQuery.of(context).size.height,
           width: double.infinity,
           child: Column(
@@ -36,7 +36,7 @@ class _OtpScreenScreenState extends State<OtpScreen> {
                       border: Border.all(color: Colors.black, width: 1),
                       borderRadius: BorderRadius.circular(10)),
                   child: IconButton(
-                    icon: Icon(Icons.arrow_back_ios_sharp),
+                    icon: const Icon(Icons.arrow_back_ios_sharp),
                     onPressed: () {
                       Navigator.pop(context);
                     },
@@ -78,9 +78,9 @@ class _OtpScreenScreenState extends State<OtpScreen> {
                   ),
                 ],
               ),
-              customizedButton(
+              CustomizedButton(
                 buttonText: "Verify",
-                buttonColor: Color(0xFF093631),
+                buttonColor: const Color(0xFF093631),
                 textColor: Colors.white,
                 onPressed: () {},
               ),
