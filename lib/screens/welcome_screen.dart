@@ -25,16 +25,16 @@ class WelcomeScreen extends StatelessWidget {
                 fit: BoxFit.cover,
               )),
           const SizedBox(height: 100),
-          customizedButton(
+          CustomizedButton(
             buttonText: "Login",
-            buttonColor: Color(0xffffb000),
+            buttonColor: const Color(0xffffb000),
             textColor: Colors.black,
             onPressed: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (_) => const LoginScreen()));
             },
           ),
-          customizedButton(
+          CustomizedButton(
             buttonText: "Register",
             buttonColor: Colors.white,
             textColor: Colors.black,
