@@ -15,13 +15,13 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  TextEditingController _emailController = TextEditingController();
-  TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Container(
+        body: SizedBox(
           height: MediaQuery.of(context).size.height,
           width: double.infinity,
           child: Column(
@@ -36,7 +36,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       border: Border.all(color: Colors.black, width: 1),
                       borderRadius: BorderRadius.circular(10)),
                   child: IconButton(
-                    icon: Icon(Icons.arrow_back_ios_sharp),
+                    icon: const Icon(Icons.arrow_back_ios_sharp),
                     onPressed: () {
                       Navigator.pop(context);
                     },
@@ -65,7 +65,7 @@ class _LoginScreenState extends State<LoginScreen> {
               Align(
                 alignment: Alignment.centerRight,
                 child: Padding(
-                  padding: EdgeInsets.all(10.0),
+                  padding: const EdgeInsets.all(10.0),
                   child: InkWell(
                     onTap: () {
                       Navigator.push(
@@ -83,9 +83,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-              customizedButton(
+              CustomizedButton(
                 buttonText: "Login",
-                buttonColor: Color(0xFF093631),
+                buttonColor: const Color(0xFF093631),
                 textColor: Colors.white,
                 onPressed: () {
                   Navigator.push(context,
@@ -108,7 +108,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ],
               ),
-              authButton(),
+              const AuthButton(),
               const SizedBox(
                 height: 40,
               ),
