@@ -1,6 +1,6 @@
 {
-    "name": "firebase_app_flutter",
-    "short_name": "firebase_app_flutter",
+    "name": "firebaseapp",
+    "short_name": "firebaseapp",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

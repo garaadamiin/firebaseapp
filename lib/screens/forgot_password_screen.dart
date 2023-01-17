@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:firebase_app_flutter/screens/login_screen.dart';
-import 'package:firebase_app_flutter/screens/otp_screen.dart';
-
 import '../widgets/customized_button.dart';
 import '../widgets/customized_textfield.dart';
+import 'login_screen.dart';
+import 'otp_screen.dart';
 
 class ForgotPasswordScreen extends StatefulWidget {
   const ForgotPasswordScreen({super.key});

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:firebase_app_flutter/screens/login_screen.dart';
-
 import '../widgets/customized_button.dart';
 import '../widgets/cutomized_auth_textfield.dart';
+import 'login_screen.dart';
 
 class OtpScreen extends StatefulWidget {
   const OtpScreen({super.key});
