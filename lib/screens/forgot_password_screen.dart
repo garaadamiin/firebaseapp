@@ -42,7 +42,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
               ),
               const Padding(
                 padding: EdgeInsets.all(10.0),
-                child: Text("Forgor Password?",
+                child: Text("Forgot Password?",
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 30,
