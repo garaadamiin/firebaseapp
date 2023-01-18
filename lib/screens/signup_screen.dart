@@ -71,7 +71,7 @@ class _SigUpScreenState extends State<SigUpScreen> {
               ),
               CustomizedTextfield(
                 myController: _confirmPasswordController,
-                hintText: "Confrim Password",
+                hintText: "Confirm Password",
                 isPassword: true,
               ),
               CustomizedButton(
